@@ -33,7 +33,7 @@ export const generateMetadata = async ({params, searchParams}, parent) => {
       title: post.title,
       description: post.excerpt,
       url: '',
-      siteName: '',
+      siteName: settings.title,
       type: 'article',
       images: [{
         url: `/api/og?title=${post.title}&website=${settings.title}`,
@@ -53,6 +53,9 @@ const dateOptions = {
 const defaults = {nonTextBehavior: 'remove'}
 const blocksToText = (blocks, opts = {}) => {
   const options = Object.assign({}, defaults, opts)
+  if (!blocks) {
+    return ''
+  }
   return blocks
     .map(block => {
       if (block._type !== 'block' || !block.children) {

@@ -1,0 +1,18 @@
+MIT License (Modified for Commercial Use)
+
+Copyright (c) 2024 Colby Hemond
+
+Permission is granted to use this project for personal or client work with a valid license purchase from colbyhemond.com.
+
+You may:
+- Deploy the template for your personal use
+- Deploy the template for a client (with one purchase per client)
+- Modify the template for custom needs
+
+You may not:
+- Resell or redistribute this template
+- Reuse the walkthrough or branded assets without permission
+- Publish a competing template using this codebase
+
+This project is provided as-is, with no warranty. For commercial licensing questions, contact colbyhemond.com.
+
