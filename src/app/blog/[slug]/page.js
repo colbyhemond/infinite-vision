@@ -96,7 +96,7 @@ export default async function Post({params}) {
     post.author.image = urlFor(post.author.image).url();
     
     return (
-      <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
+      <main className="container mx-auto min-h-screen max-w-3xl p-2 md:p-8 flex flex-col gap-4 mt-6 md:mt-0">
         <Link href="/blog" className="hover:underline pb-5">
           ← Back to posts
         </Link>
@@ -110,7 +110,7 @@ export default async function Post({params}) {
           </div>
           
           {postImageUrl && (
-            <div className="relative rounded-xl w-[425px] h-[250px] md:w-[650px] md:h-[400px] mt-5 mx-auto">
+            <div className="relative rounded-xl w-[350px] h-[200px] md:w-[650px] md:h-[400px] mt-5 mx-auto">
               <Image
                 src={postImageUrl}
                 alt={post.title}
@@ -123,8 +123,10 @@ export default async function Post({params}) {
             {Array.isArray(post.body) && <PortableText value={post.body} components={portableTextComponents} />}
           </div>
         </article>
+        {console.log(post)};
+        
         {post.calltoaction && 
-          <CallToActionSection text={post.calltoaction.text} button={{href: post.calltoaction.buttonlink, text: post.calltoaction.buttontext}} />
+          <CallToActionSection text={post.calltoaction.ctatext} button={{href: post.calltoaction.buttonlink, text: post.calltoaction.buttontext}} />
         }
         
         {post.tags && 
