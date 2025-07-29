@@ -1,6 +1,7 @@
 import { client } from "../../sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import BlogCard from "../../components/blog/BlogCard";
+import { redirect } from "next/navigation";
 
 const POSTS_QUERY = `*[
     _type == "post"
@@ -29,6 +30,8 @@ const Blog = async () => {
             imageUrl: postImageUrl(post)
         }
     });
+
+    redirect('/not-found');
 
 
     return (

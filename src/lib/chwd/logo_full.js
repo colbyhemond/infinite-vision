@@ -6,8 +6,8 @@ const Logo = (props) => {
     <Link href="https://www.colbyhemond.com">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="200pt"
-        height="40pt"
+        width="150pt"
+        height="30pt"
         viewBox="0 0 250 50"
         {...props}
         fill="currentColor"

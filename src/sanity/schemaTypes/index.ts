@@ -3,6 +3,7 @@ import { callToActionType } from './callToActionType'
 import { homeType } from './homeType'
 import { personType } from './personType'
 import {postType} from './postType'
+import { serviceType } from './serviceType'
 import { settingsType } from './settings'
 import { socialLinkType } from './socialLinkType'
 import { tagsType } from './tagsType'
@@ -17,5 +18,6 @@ export const schema = [
     callToActionType,
     tagsType,
     tagType,
-    personType
+    personType,
+    serviceType
 ]

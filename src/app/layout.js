@@ -1,7 +1,5 @@
 
-import Navbar from "../components/layout/Navbar";
 import "./globals.css";
-import Footer from "../components/layout/Footer";
 import FathomAnalytics from "../components/FathomAnalytics";
 import { client } from "../sanity/client";
 import ThemeWrapper from "../components/layout/ThemeWrapper";
@@ -13,18 +11,18 @@ const options = { next: { revalidate: 30 } };
 
 export const metadata = async () => {
   const settings = await client.fetch(SETTINGS_QUERY, {}, options);
-  const title = settings?.title || "Blog";
+  const title = settings?.title || "Infinite Vision";
   return ({
     title: {
       template: `%s | ${title}`,
       default: title,
     },
-    description: settings?.description || "A blog website built by Colby Hemond Web Development. Visit https://www.colbyhemond.com to get your own copy", 
-    alternates: {
-      types: {
-        'application/rss+xml': `https://${process.env.NEXT_PUBLIC_DOMAIN}/feed.xml`,
-      },
-    }
+    description: settings?.description || "Infinite Vision - Painting and Outdoor Services. We provide high-quality painting and outdoor services for your home or business.", 
+    // alternates: {
+    //   types: {
+    //     'application/rss+xml': `https://${process.env.NEXT_PUBLIC_DOMAIN}/feed.xml`,
+    //   },
+    // }
   })
 };
 

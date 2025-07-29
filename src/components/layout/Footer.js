@@ -25,6 +25,7 @@ const Footer = ({socialLinks}) => {
         <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 pb-5">
             <nav className="grid grid-flow-col gap-4">
                 <Link href="/" className="link link-hover">Home</Link>
+                <Link href="/services" className="link link-hover">Services</Link>
                 <Link href="/about" className="link link-hover">About</Link>
                 <Link href="/blog" className="link link-hover">Blog</Link>
                 {/* <Link href="/contact" className="link link-hover">Contact</Link> */}
@@ -44,7 +45,7 @@ const Footer = ({socialLinks}) => {
                 <p className="pt-4 order-10 mx-auto md:mx-0 lg:order-1">Copyright © {new Date().getFullYear()}</p>
                 <div className="flex  items-end gap-4 order-12 md:order-5 mx-auto">
           
-                    <div>Brought to you by:</div>
+                    <div>Created By:</div>
                     <div>
                         <Logo/>
                     </div>

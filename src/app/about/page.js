@@ -49,7 +49,7 @@ const AboutPage = async () => {
 
     return (<>
     <main className="mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
-        <div className="prose mx-auto h-screen">
+        <div className="prose mx-auto min-h-screen">
           <h1 className="text-4xl font-bold mb-8 text-center">{content.title}</h1>
           <div className="mx-5">
             {Array.isArray(content.body) && <PortableText value={content.body} />}

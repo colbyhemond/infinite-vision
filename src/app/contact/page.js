@@ -7,16 +7,16 @@ import { redirect } from 'next/navigation'
 
 const ContactPage = async () => {
     // let settings = await client.fetch(SETTINGS_QUERY, {}, options);
-
-    redirect('/about')
-    
+    const settings = {
+        contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || null
+    };
 
     return (<>
     <main className="mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
         <div className="prose mx-auto h-screen w-full">
           <h1 className="text-4xl font-bold mb-8 text-center">Contact</h1>
           <div>
-            <form action={`https://formsubmit.co/${settings.contactEmail}`} method="POST" className="flex flex-col gap-4 bg-base-200 p-4 rounded-xl drop-shadow w-full">
+            <form  method="POST" className="flex flex-col gap-4 bg-base-200 p-4 rounded-xl drop-shadow w-full">
                 <input className="input" placeholder="Name" type="text" name="name"></input>
                 <input className="input" placeholder="Email" type="email" name="email"></input>
                 <textarea className="textarea" placeholder="Message" name="message"></textarea>

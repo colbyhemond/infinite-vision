@@ -34,9 +34,10 @@ const Navbar = ({title}) => {
                 <div className="hidden md:flex mdflex-none pointer-events-auto">
                     <ul className="menu menu-horizontal px-1 gap-4">
                         <Link href="/" className="btn btn-ghost pointer-events-auto">Home</Link>
+                        <Link href="/services" className="btn btn-ghost pointer-events-auto">Services</Link>
                         <Link href="/about" className="btn btn-ghost pointer-events-auto">About</Link>
-                        <Link href="/blog" className="btn btn-ghost pointer-events-auto">Blog</Link>
-                        {/* <Link href="/contact">Contact</Link> */}
+                        {/* <Link href="/blog" className="btn btn-ghost pointer-events-auto">Blog</Link> */}
+                        <Link href="/contact" className="btn btn-ghost pointer-events-auto">Contact</Link>
                     </ul>
                 </div>
                 
@@ -56,12 +57,13 @@ const Navbar = ({title}) => {
                 
                 
             </div>
-            <ScrollProgress />
+            {/* <ScrollProgress /> */}
             <div className={`transition-all duration-700 ease-in-out flex flex-col h-screen bg-neutral bg-opacity-95 text-neutral-content text-center gap-5 p-10 sticky top-0 w-full font-bold !z-[999] ${translate} pointer-events-auto overflow-y-scroll`}>
                 <Link className="pointer-events-auto text-3xl" href='/' onClick={()=>{setTranslate(translateHide)}}>Home</Link>
+                <Link className="pointer-events-auto text-3xl" href='/services' onClick={()=>{setTranslate(translateHide)}}>Services</Link>
                 <Link className="pointer-events-auto text-3xl" href='/about' onClick={()=>{setTranslate(translateHide)}}>About</Link>
-                <Link className="pointer-events-auto text-3xl" href='/blog' onClick={()=>{setTranslate(translateHide)}}>Blog</Link>
-                {/* <Link className="pointer-events-auto text-3xl" href='/contact' onClick={()=>{setTranslate(translateHide)}}>Contact</Link> */}
+                {/* <Link className="pointer-events-auto text-3xl" href='/blog' onClick={()=>{setTranslate(translateHide)}}>Blog</Link> */}
+                <Link className="pointer-events-auto text-3xl" href='/contact' onClick={()=>{setTranslate(translateHide)}}>Contact</Link>
             </div>
             
         </div>

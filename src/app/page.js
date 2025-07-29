@@ -17,43 +17,48 @@ const { projectId, dataset } = client.config();
 const Home = async () => {
   let homeContent = await client.fetch(HOME_QUERY, {}, options);
 
-  if (!homeContent) {
-    homeContent = {
-      showcasePost: {
-        title: "Welcome to your blog!",
-        excerpt: "Don't worry, this is just some placeholder content. It will all be replaced with your own content once you start adding posts. I hope you enjoy your new blog!",
-        image: {
-          url: "/placeholder.png",
-          alt: "Placeholder image",
-        },
-        publishedAt: new Date().toISOString(),
-        author: {
-          name: "Colby Hemond",
-          image: "/colby.jpeg",
-        },
-        slug: {
-          current: "/",
-        },
-      }
-    }
+  // if (!homeContent) {
+  //   homeContent = {
+  //     showcasePost: {
+  //       title: "Welcome to your blog!",
+  //       excerpt: "Don't worry, this is just some placeholder content. It will all be replaced with your own content once you start adding posts. I hope you enjoy your new blog!",
+  //       image: {
+  //         url: "/placeholder.png",
+  //         alt: "Placeholder image",
+  //       },
+  //       publishedAt: new Date().toISOString(),
+  //       author: {
+  //         name: "Colby Hemond",
+  //         image: "/colby.jpeg",
+  //       },
+  //       slug: {
+  //         current: "/",
+  //       },
+  //     }
+  //   }
   
-  } else {
-    homeContent.showcasePost.image.url = urlFor(homeContent.showcasePost.image).url();
-    homeContent.showcasePost.author.image = urlFor(homeContent.showcasePost.author.image).url();
+  // } else {
+  //   homeContent.showcasePost.image.url = urlFor(homeContent.showcasePost.image).url();
+  //   homeContent.showcasePost.author.image = urlFor(homeContent.showcasePost.author.image).url();
+  // }
+
+  if (!homeContent) {
+
   }
 
   const calltoaction = {
-    text: homeContent?.calltoaction?.ctatext || "See what else we have to say!",
+    text: homeContent?.calltoaction?.ctatext || "Check out our services!",
     button: {
-      href: homeContent?.calltoaction?.buttonlink || "/blog",
-      text: homeContent?.calltoaction?.buttontext || "Go to Blog",
+      href: homeContent?.calltoaction?.buttonlink || "/services",
+      text: homeContent?.calltoaction?.buttontext || "See Services",
     },
   };
 
   return (
     <div>
-      <BlogHero post={homeContent.showcasePost} />
-      <LatestPosts />
+      {/* <BlogHero post={homeContent.showcasePost} />
+      <LatestPosts /> */}
+      <Hero/>
       <CallToActionSection text={calltoaction.text} button={calltoaction.button}/>
     </div>
   );
