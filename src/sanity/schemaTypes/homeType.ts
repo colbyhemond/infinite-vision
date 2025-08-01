@@ -37,6 +37,14 @@ export const homeType = defineType({
         ],
     }),
     defineField({
+        name: 'body',
+        type: 'array',
+        of: [
+          {type: 'block'},
+          {type: 'image'},
+        ],
+      }),
+    defineField({
         name: 'calltoaction',
         title: 'Call To Action',
         type: 'calltoaction',

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { Menu } from "react-feather"
+import { Menu, Phone } from "react-feather"
 import { useState } from "react"
 import ScrollProgress from "./ScrollProgress"
 
@@ -31,6 +31,12 @@ const Navbar = ({title}) => {
                     {/* <Link href='/' className="btn btn-ghost text-xl pointer-events-auto"></Link> */}
                     <Link href="/" className="btn btn-ghost text-xl pointer-events-auto">{title}</Link>
                 </div>
+                <div className="mr-10">
+                    <Link href="tel:9899035123" className="btn btn-sm btn-accent pointer-events-auto">
+                        <span className="hidden md:inline">Call Us</span>
+                        <span className="hidden md:inline"> (989) 903-5123</span>
+                    </Link>
+                </div>
                 <div className="hidden md:flex mdflex-none pointer-events-auto">
                     <ul className="menu menu-horizontal px-1 gap-4">
                         <Link href="/" className="btn btn-ghost pointer-events-auto">Home</Link>
@@ -48,6 +54,11 @@ const Navbar = ({title}) => {
                 <div className="w-full p-5 text-base-content flex justify-between items-center bg-base-100">
                     <div>
                         <Link href='/' onClick={()=>{setTranslate(translateHide)}} className="btn btn-ghost text-xl">{title}</Link>
+                    </div>
+                    <div className="">
+                        <Link href="tel:9899035123" className="btn btn-sm rounded-full w-12 h-12 btn-ghost pointer-events-auto">
+                            <Phone />
+                        </Link>
                     </div>
                     <div>
                         <div onClick={()=>{handleNavToggle()}}><Menu className='bg-current w-12 h-12 p-2 rounded-full stroke-base-200 cursor-pointer'/></div>

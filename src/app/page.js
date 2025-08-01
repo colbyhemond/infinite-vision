@@ -1,3 +1,4 @@
+import { PortableText } from "next-sanity";
 import Hero from "../components/Hero";
 import BlogHero from "../components/blog/BlogHero";
 import LatestPosts from "../components/blog/LatestPosts";
@@ -59,6 +60,9 @@ const Home = async () => {
       {/* <BlogHero post={homeContent.showcasePost} />
       <LatestPosts /> */}
       <Hero/>
+      <div className="prose m-auto my-5 p-5 bg-base-200">
+        {Array.isArray(homeContent.body) && <PortableText value={homeContent.body} />}
+      </div>
       <CallToActionSection text={calltoaction.text} button={calltoaction.button}/>
     </div>
   );
