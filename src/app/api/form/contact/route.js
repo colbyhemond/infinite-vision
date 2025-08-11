@@ -93,10 +93,10 @@ try {
     }
 
     const res = await client.sendEmail({
-      "From": "notifications@colbyhemond.com",
+      "From": "notify@chwd.email",
       "To": "hemond.colby@gmail.com",
       "ReplyTo": emailAddress,
-      "Bcc": "notification@colbyhemond.com",
+      "Bcc": "notify@chwd.email",
       "Subject": "Infinite Vision Contact Submission",
       "HtmlBody": getHtml(emailAddress, name, message),
       "TextBody": "Infinite Vision Contact Submission",
