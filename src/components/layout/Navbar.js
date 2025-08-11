@@ -25,19 +25,19 @@ const Navbar = ({title}) => {
     
 
     return (<>
-        <div className=" w-full shadow pointer-events-none fixed top-0 z-50 max-w-[100vw]">
+        <div className=" w-[100vw] shadow pointer-events-none fixed top-0 z-50 ">
             <div className="hidden md:flex justify-between items-center p-5 bg-base-100">
                 <div className="hidden md:flex md:flex-1">
                     {/* <Link href='/' className="btn btn-ghost text-xl pointer-events-auto"></Link> */}
                     <Link href="/" className="btn btn-ghost text-xl pointer-events-auto">{title}</Link>
                 </div>
-                <div className="mr-10">
+                <div className="pr-10">
                     <Link href="tel:9899035123" className="btn btn-sm btn-accent pointer-events-auto">
                         <span className="hidden md:inline">Call Us</span>
                         <span className="hidden md:inline"> (989) 903-5123</span>
                     </Link>
                 </div>
-                <div className="hidden md:flex mdflex-none pointer-events-auto">
+                <div className="hidden md:flex md:flex-none pointer-events-auto">
                     <ul className="menu menu-horizontal px-1 gap-4">
                         <Link href="/" className="btn btn-ghost pointer-events-auto">Home</Link>
                         <Link href="/services" className="btn btn-ghost pointer-events-auto">Services</Link>

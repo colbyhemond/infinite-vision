@@ -16,7 +16,7 @@ const ThemeWrapper = ({theme, children}) => {
     , [])
 
     return (<>
-        <div id='theme-wrapper' data-theme={theme} className={`antialiased min-h-screen flex flex-col justify-between w-full`}>
+        <div id='theme-wrapper' data-theme={theme} className={`antialiased min-h-screen flex flex-col justify-between w-[100vw] overflow-x-hidden`}>
             {children}
         </div>
     </>)
