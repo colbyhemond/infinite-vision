@@ -25,7 +25,7 @@ const Navbar = ({title}) => {
     
 
     return (<>
-        <div className=" w-full shadow pointer-events-none fixed top-0 z-50">
+        <div className=" w-full shadow pointer-events-none fixed top-0 z-50 max-w-[100vw]">
             <div className="hidden md:flex justify-between items-center p-5 bg-base-100">
                 <div className="hidden md:flex md:flex-1">
                     {/* <Link href='/' className="btn btn-ghost text-xl pointer-events-auto"></Link> */}
