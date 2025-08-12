@@ -28,7 +28,7 @@ const Footer = ({socialLinks}) => {
                 <address className="not-italic">
                     <p className="text-lg font-bold">Infinite Vision</p>
                     <p className="text-sm">Painting and Outdoor Services</p>
-                    <p>Standish, MI, 48658</p>
+                    <p>Midland, MI, 48640</p>
                     <p className="mt-2">Phone: <a href="tel:9899035123" className="link link-hover">(989) 903-5123</a></p>
                 </address>
             </div>
@@ -36,9 +36,10 @@ const Footer = ({socialLinks}) => {
             <nav className="grid grid-flow-col gap-4">
                 <Link href="/" className="link link-hover">Home</Link>
                 <Link href="/services" className="link link-hover">Services</Link>
+                <Link href="/projects" className="link link-hover">Projects</Link>
                 <Link href="/about" className="link link-hover">About</Link>
-                <Link href="/blog" className="link link-hover">Blog</Link>
-                {/* <Link href="/contact" className="link link-hover">Contact</Link> */}
+                {/* <Link href="/blog" className="link link-hover">Blog</Link> */}
+                <Link href="/contact" className="link link-hover">Contact</Link>
                 
                 
 

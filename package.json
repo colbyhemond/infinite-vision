@@ -14,6 +14,8 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.76.1",
     "fathom-client": "^3.7.2",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.539.0",
     "next": "15.1.7",
     "next-sanity": "^9.8.59",
     "postmark": "^4.0.5",
