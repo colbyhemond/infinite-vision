@@ -23,6 +23,29 @@ export const metadata = async () => {
     //     'application/rss+xml': `https://${process.env.NEXT_PUBLIC_DOMAIN}/feed.xml`,
     //   },
     // }
+    openGraph: {
+      title,
+      description: settings?.description || "Infinite Vision - Painting and Outdoor Services. We provide high-quality painting and outdoor services for your home or business.",
+      url: process.env.NEXT_PUBLIC_SITE_URL || "",
+      type: "website",
+      images: [
+        {
+          url: settings?.openGraphImage?.asset?.url || "/opengraph-image.png",
+          alt: settings?.openGraphImageAlt || title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: settings?.description || "Infinite Vision - Painting and Outdoor Services. We provide high-quality painting and outdoor services for your home or business.",
+      images: [
+        {
+          url: settings?.twitterImage?.asset?.url || "/opengraph-image.png",
+          alt: settings?.twitterImageAlt || title,
+        },
+      ],
+    },
   })
 };
 

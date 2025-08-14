@@ -69,7 +69,6 @@ export default function ProjectsSection({ projects }) {
 }
 
 function ProjectCard({ item, index }) {
-    console.log(item.slug);
   return (
     <Link href={`/projects/${item.slug.current}`} className="no-underline hover:underline">
     <motion.article
