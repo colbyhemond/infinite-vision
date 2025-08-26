@@ -30,7 +30,7 @@ export const metadata = async () => {
       type: "website",
       images: [
         {
-          url: settings?.openGraphImage?.asset?.url || "/opengraph-image.png",
+          url: "https://www.infinitevisionpainting.com/opengraph-image.png",
           alt: settings?.openGraphImageAlt || title,
         },
       ],
