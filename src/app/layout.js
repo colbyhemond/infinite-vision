@@ -31,7 +31,7 @@ export const metadata = async () => {
       images: [
         {
           url: "https://www.infinitevisionpainting.com/opengraph-image.png",
-          alt: settings?.openGraphImageAlt || title,
+          alt: "Infinite Vision - Painting and Outdoor Services",
         },
       ],
     },
@@ -41,8 +41,8 @@ export const metadata = async () => {
       description: settings?.description || "Infinite Vision - Painting and Outdoor Services. We provide high-quality painting and outdoor services for your home or business.",
       images: [
         {
-          url: settings?.twitterImage?.asset?.url || "/opengraph-image.png",
-          alt: settings?.twitterImageAlt || title,
+          url: "https://www.infinitevisionpainting.com/opengraph-image.png",
+          alt: "Infinite Vision - Painting and Outdoor Services",
         },
       ],
     },
