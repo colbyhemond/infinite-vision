@@ -28,7 +28,7 @@ const Footer = ({socialLinks}) => {
                 <address className="not-italic">
                     <p className="text-lg font-bold">Infinite Vision</p>
                     <p className="text-sm">Painting and Outdoor Services</p>
-                    <p>Midland, MI, 48640</p>
+                    <p>Mid-Michigan</p>
                     <p className="mt-2">Phone: <a href="tel:9899035123" className="link link-hover">(989) 903-5123</a></p>
                 </address>
             </div>
